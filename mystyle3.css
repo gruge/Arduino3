@@ -1,0 +1,48 @@
+table {
+left: 100px;
+    position: absolute;
+}
+
+td {
+    border: 5px solid;
+	color: #218BD4;
+}
+
+table.table1 {	   	
+	position: absolute;
+	left: 650px;
+}
+
+.header {
+	padding: 30px;
+	text-align: center;
+  background: #218BD4;
+  color: white;
+  font-size: 30px;
+  font-family: Monospace;
+}
+
+table.table2 {
+	position: absolute;
+	left: 1px;
+		text-align: center;
+		  font-size: 30px;
+	  font-family: Monospace;
+	top: 630px;
+}
+table.table3 {
+	position: absolute;
+	left: 1px;
+		text-align: Left;
+		  font-size: 15px;
+	  font-family: Monospace;
+	top: 980px;
+}
+table.table4 {
+	position: absolute;
+	left: 1px;
+		text-align: Left;
+		  font-size: 20px;
+	  font-family: Monospace;
+	top: 1418px;
+}

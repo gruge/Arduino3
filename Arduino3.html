@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="mystyle3.css">
+		<title>Arduino1</title>
+		<header class="header">Obstacle Avoidance Sensor KY-032</header>
+	</head>
+<body>
+	<table>
+	<td><img src="Module3.png" alt="Module" width="500" height="500"></td>
+	</table>
+	
+	<table class="table1">
+	<td><img src="ModuleBlueprint3.png" alt="ModuleBlueprint" width="600" height="500"></td>
+	</table>
+	
+	<table class="table2">
+	<tr>
+		<td>
+		<h1>Brief description of the module</h1>
+		"KY-032" - the module is an infrared obstacle detection sensor. 
+		The device has a transmitter (IR LED) that emits an infrared beam 
+		with a frequency of 38 kHz, which is received by the receiver (IR receiver) 
+		on the board. When an object approaches the sensor (proximity is regulated by a 
+		potentiometer) at the output
+        “OUT” low voltage level appears and the LED on the module board turns on.
+		</td>
+	</tr>
+	</table>
+	
+		<table class="table3">
+	<tr>
+		<td>
+			<h1>Code:</h1>
+		 digitalWrite( enablePin, HIGH);     //Включить внутренний сигнал 38 кГц</br>
+  microDelay( 210);                   //Задержка 210µs(8 пульсов по 38kHz)</br>
+  if( digitalRead( outputPin))        //Если Output детектора равен HIGH</br>
+  {</br>
+      objectDetect = false;           //Препятсвия не было найдено</br>
+  }</br>
+  else                                //Но если Output равен LOW,</br>
+  {</br>
+      microDelay( 395);               //Опять ждать 15 пульсов</br>
+      if( digitalRead( outputPin))    //Если Output теперь равен HIGH</br>
+      {</br>
+          objectDetect = false;       //Препятсвия не было найдено</br>
+      }</br>
+      else                            //Если Output до сих пор LOW</br>
+      {</br>
+          objectDetect = true;        //Препятсвие било обнаружено</br>
+      }</br>
+  }</br>
+  digitalWrite( enablePin, LOW);      //Выключить внутренний сигнал 38kHz</br>                    
+		</td>
+	</tr>
+	</table>
+	<table class="table4">
+	<tr>
+	<td>
+		<a href="http://scrumpoker.eu/arduino/avoidanceSensor.php">Go to original website</a>
+	</td>
+	</tr>
+	</table>
+</body>
+</html>
